@@ -82,21 +82,7 @@
 			</svg>
 		</button>
 		<div class="modal-politic">
-			<svg viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<rect y="1" width="14" height="14" rx="2" fill="#F9F9F9"/>
-			<g clip-path="url(#clip0)">
-			<path d="M7.36085 12.23C7.22721 12.3644 7.04489 12.4394 6.85549 12.4394C6.66609 12.4394 6.48376 12.3644 6.35012 12.23L2.31414 8.19333C1.89529 7.77448 1.89529 7.09529 2.31414 6.67723L2.8195 6.17174C3.23848 5.75289 3.91688 5.75289 4.33573 6.17174L6.85549 8.69163L13.6642 1.88274C14.0832 1.46389 14.7623 1.46389 15.1805 1.88274L15.6858 2.38824C16.1047 2.80708 16.1047 3.48614 15.6858 3.90433L7.36085 12.23Z" fill="url(#paint0_linear)"/>
-			</g>
-			<defs>
-			<linearGradient id="paint0_linear" x1="8.99999" y1="1.5686" x2="8.99999" y2="12.4394" gradientUnits="userSpaceOnUse">
-			<stop stop-color="#85C226"/>
-			<stop offset="1" stop-color="#96C272"/>
-			</linearGradient>
-			<clipPath id="clip0">
-			<rect width="14" height="14" fill="white" transform="translate(2)"/>
-			</clipPath>
-			</defs>
-			</svg>
+			<img src="img/check.svg" alt="">
 			<p class="modal-politic__text">
 				Нажимая на кнопку, вы даёте согласие на <a href="">обработку персональных данных</a> и соглашаетесь c <a href="">политикой конфиденциальности</a>
 			</p>
@@ -348,6 +334,20 @@
 							для рольставен (в см)
 						</h2>
 						<div class="qwiz-row">
+							<div class="qwiz-slide-range">
+								<input name="range-1" type="range" class="qwiz-slide-range__input rng-1" min="30" max="150">
+								<div class="qwiz-range-text">
+									<span class="qwiz-range-text__small">
+										30
+									</span>
+									<span class="qwiz-range-text__center">
+										<span class="qwiz-range_result">30</span>см
+									</span>
+									<span class="qwiz-range-text__small">
+										150
+									</span>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="qwiz-slide">
@@ -369,7 +369,20 @@
 							для рольставен (в см)
 						</h2>
 						<div class="qwiz-row">
-							
+							<div class="qwiz-slide-range">
+								<input name="range-1" type="range" class="qwiz-slide-range__input rng-2" min="30" max="150">
+								<div class="qwiz-range-text">
+									<span class="qwiz-range-text__small">
+										30
+									</span>
+									<span class="qwiz-range-text__center">
+										<span class="qwiz-range_result rst-2">30</span>см
+									</span>
+									<span class="qwiz-range-text__small">
+										300
+									</span>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="qwiz-slide">
@@ -390,7 +403,7 @@
 							Нужна ли вам доставка?
 						</h2>
 						<div class="qwiz-row qwiz-row__max">
-							<div class="qwiz-block">
+							<div class="qwiz-block qwiz-block-active">
 								<div class="qwiz-block-check">
 									<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M14.9388 2.63953L5.63837 11.94C5.55645 12.0219 5.42381 12.0219 5.34208 11.94L0.0612965 6.65897C-0.0204322 6.57744 -0.0204322 6.44479 0.0612965 6.36287L1.34446 5.07971C1.42638 4.99799 1.55902 4.99799 1.64075 5.07971L5.49042 8.92919L13.3595 1.06008C13.4416 0.978347 13.5739 0.978347 13.6558 1.06008L14.9388 2.34324C15.0207 2.42496 15.0207 2.55742 14.9388 2.63953Z" fill="#E3E3E3"/>
@@ -432,7 +445,7 @@
 							Нужна ли вам установка?
 						</h2>
 						<div class="qwiz-row qwiz-row__max">
-							<div class="qwiz-block">
+							<div class="qwiz-block qwiz-block-active">
 								<div class="qwiz-block-check">
 									<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M14.9388 2.63953L5.63837 11.94C5.55645 12.0219 5.42381 12.0219 5.34208 11.94L0.0612965 6.65897C-0.0204322 6.57744 -0.0204322 6.44479 0.0612965 6.36287L1.34446 5.07971C1.42638 4.99799 1.55902 4.99799 1.64075 5.07971L5.49042 8.92919L13.3595 1.06008C13.4416 0.978347 13.5739 0.978347 13.6558 1.06008L14.9388 2.34324C15.0207 2.42496 15.0207 2.55742 14.9388 2.63953Z" fill="#E3E3E3"/>
@@ -467,11 +480,89 @@
 							<a href="#" class="qwiz-slide-line__item qwiz-slide-line__item_active"></a>
 							<a href="#" class="qwiz-slide-line__item qwiz-slide-line__item-5 qwiz-slide-line__item_active"></a>
 						</div>
-						<h2 class="qwiz-slide__title">
-							Заполните форму, чтобы получить расчет и гарантированный подарок
+						<h2 class="qwiz-slide__title_last">
+							<strong>Заполните форму,</strong> чтобы получить расчет <br>
+							и гарантированный подарок
 						</h2>
-						<div class="qwiz-row qwiz-row__max">
-							
+						<h3 class="qwiz-slide__title_subtitle">
+							Выберите, куда прислать расчет стоимости
+						</h3>
+						<div class="qwiz-row qwiz-nav">
+							<div class="qwiz-nav-block qwiz-nav-block-1">
+								<span class="qwiz-nav-block__svg">
+									<img src="img/whatsapp (2) 1.svg" alt="">
+								</span>
+								<span class="qwiz-nav-block__title">
+									WhatsApp
+								</span>
+							</div>
+							<div class="qwiz-nav-block qwiz-nav-block-2">
+								<div class="qwiz-nav-block__wrapper">
+									
+									<svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.973353 0.892493C2.98629 2.59724 6.51837 5.59641 7.55649 6.53156C7.69586 6.65777 7.84533 6.72194 8.0005 6.72194C8.15536 6.72194 8.30458 6.65838 8.44363 6.53276C9.48264 5.5967 13.0147 2.59724 15.0277 0.892493C15.153 0.78656 15.1721 0.600361 15.0707 0.470853C14.8361 0.171589 14.4864 0 14.1116 0H1.88942C1.51464 0 1.16491 0.171589 0.930384 0.470882C0.828921 0.600362 0.848028 0.78656 0.973353 0.892493Z" fill="white"/>
+									<path d="M15.1564 1.81621C15.0481 1.76579 14.9207 1.78338 14.8306 1.86038C12.5983 3.75279 9.74922 6.17848 8.85284 6.98621C8.34973 7.44037 7.65149 7.44037 7.1472 6.98561C6.19175 6.12474 2.99235 3.40486 1.17007 1.86035C1.07935 1.78335 0.951646 1.76636 0.844224 1.81618C0.736229 1.86634 0.666992 1.97436 0.666992 2.09341V9.77771C0.666992 10.4518 1.21513 10.9999 1.88923 10.9999H14.1115C14.7855 10.9999 15.3337 10.4518 15.3337 9.77771V2.09341C15.3337 1.97436 15.2644 1.86605 15.1564 1.81621Z" fill="white"/>
+									</svg>
+
+								</div>								
+								<span class="qwiz-nav-block__title">
+									Сообщения
+								</span>
+							</div>
+							<div class="qwiz-nav-block qwiz-nav-block-3">
+								<span class="qwiz-nav-block__svg">
+									<img src="img/telegram (2) 1.svg" alt="">
+								</span>
+								<span class="qwiz-nav-block__title">
+									Telegram
+								</span>
+							</div>
+							<div class="qwiz-nav-block qwiz-nav-block-4 qwiz-nav-block_active">
+								<span class="qwiz-nav-block__svg">
+									<img src="img/phone-call (4) 1 (1).svg" alt="">
+								</span>
+								<span class="qwiz-nav-block__title">
+									Телефон
+								</span>
+							</div>
+						</div>
+						<div class="qwiz-forms">
+							<span class="qwiz-forms__title">
+								Как к Вам обращаться?
+							</span>
+							<form action="" class="qwiz-form">
+								<label for="" class="modal-form__label">
+									<span class="modal-form__icon">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g opacity="0.5">
+										<path d="M10 0C7.09223 0 4.72656 2.36566 4.72656 5.27344C4.72656 8.18121 7.09223 10.5469 10 10.5469C12.9078 10.5469 15.2734 8.18121 15.2734 5.27344C15.2734 2.36566 12.9078 0 10 0Z" fill="#E3E3E3"/>
+										<path d="M16.5612 13.992C15.1174 12.5261 13.2035 11.7188 11.1719 11.7188H8.82812C6.79656 11.7188 4.88258 12.5261 3.43883 13.992C2.00215 15.4507 1.21094 17.3763 1.21094 19.4141C1.21094 19.7377 1.47328 20 1.79688 20H18.2031C18.5267 20 18.7891 19.7377 18.7891 19.4141C18.7891 17.3763 17.9979 15.4507 16.5612 13.992Z" fill="#E3E3E3"/>
+										</g>
+										</svg>
+									</span>
+									<input type="text" class="modal-form__input" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ">
+								</label>
+								<span class="qwiz-forms__title">
+									Введите свой номер телефона
+								</span>
+								<label for="" class="modal-form__label">
+									<span class="modal-form__icon">
+										<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M19.3038 13.1277C18.0189 13.1277 16.7572 12.9362 15.5616 12.5597C14.9757 12.3693 14.2555 12.544 13.898 12.8939L11.5381 14.5915C8.80131 13.1994 7.1155 11.5934 5.67455 9.00505L7.40359 6.81484C7.85281 6.38734 8.01394 5.76286 7.82089 5.17693C7.42409 4.03161 7.22252 2.8299 7.22252 1.6049C7.22257 0.719948 6.46706 0 5.53846 0H1.68412C0.75551 0 0 0.719948 0 1.60484C0 11.7481 8.65959 20 19.3038 20C20.2325 20 20.988 19.2801 20.988 18.3952V14.7325C20.9879 13.8477 20.2324 13.1277 19.3038 13.1277Z" fill="#E3E3E3" fill-opacity="0.5"/>
+										</svg>
+									</span>
+									<input type="text" class="modal-form__input" placeholder="+7 (777) 777-77-77">
+								</label>
+								<button href="#qwiz-wrapper" class="btn-animate header-text__btn wow fadeInLeft" data-wow-delay="0.6s">
+									<span>получить расчет стоимости</span>
+								</button>
+								<div class="modal-politic">
+									<img src="img/check.svg" alt="">
+									<p class="modal-politic__text">
+										Нажимая на кнопку, вы даёте согласие на <a href="">обработку персональных данных</a> и соглашаетесь c <a href="">политикой конфиденциальности</a>
+									</p>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -493,15 +584,32 @@
 					<span class="qwiz-avatar__prof">
 						Менеджер
 					</span>
-					<p class="qwiz-text">
-						Выберите цвет рольставен из базовой палитры. Также мы можем нанести фотопечать или сделать цвет под вашу плитку.
-						<br>
-						<br>
-						<br>
-						<span>
-						*Экран монитора не может передать полноту и оттенок цвета, поэтому наши замерщики при выезде предоставляют образцы.
-						</span>
-					</p>
+					<div class="qwiz-text__slider">
+						<p class="qwiz-text">
+							Выберите цвет рольставен из базовой палитры. Также мы можем нанести фотопечать или сделать цвет под вашу плитку.
+							<br>
+							<br>
+							<br>
+							<span>
+							*Экран монитора не может передать полноту и оттенок цвета, поэтому наши замерщики при выезде предоставляют образцы.
+							</span>
+						</p>
+						<p class="qwiz-text">
+							Укажите ширину проема, куда вы хотите установить рольставни
+						</p>
+						<p class="qwiz-text">
+							Теперь укажите высоту проема.
+						</p>
+						<p class="qwiz-text">
+							Потребуется ли Вам доставка готовых рольставен?
+						</p>
+						<p class="qwiz-text">
+							Нужна ли вам установка?
+						</p>
+						<p class="qwiz-text">
+							Уточните форму связи и получите гарантированный подарок!
+						</p>
+					</div>
 				</div>
 				<div class="qwiz-present">
 					<span class="qwiz-present__title">
