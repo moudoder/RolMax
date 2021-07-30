@@ -19,7 +19,7 @@
 		<strong>Оставьте свой номер телефона, </strong> <br>
 		и мы свяжемся с Вами в кротчайшие сроки
 	</div>
-	<form action="" class="modal-form">
+	<form action="" id="form-1" class="modal-form">
 		<div class="modal-form-check">
 			
 			<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +48,7 @@
 				</g>
 				</svg>
 			</span>
-			<input type="text" class="modal-form__input" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ">
+			<input type="text" name="call-name" required class="modal-form__input" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ">
 		</label>
 		<label for="" class="modal-form__label">
 			<span class="modal-form__icon">
@@ -56,7 +56,7 @@
 				<path d="M19.3038 13.1277C18.0189 13.1277 16.7572 12.9362 15.5616 12.5597C14.9757 12.3693 14.2555 12.544 13.898 12.8939L11.5381 14.5915C8.80131 13.1994 7.1155 11.5934 5.67455 9.00505L7.40359 6.81484C7.85281 6.38734 8.01394 5.76286 7.82089 5.17693C7.42409 4.03161 7.22252 2.8299 7.22252 1.6049C7.22257 0.719948 6.46706 0 5.53846 0H1.68412C0.75551 0 0 0.719948 0 1.60484C0 11.7481 8.65959 20 19.3038 20C20.2325 20 20.988 19.2801 20.988 18.3952V14.7325C20.9879 13.8477 20.2324 13.1277 19.3038 13.1277Z" fill="#E3E3E3" fill-opacity="0.5"/>
 				</svg>
 			</span>
-			<input type="text" class="modal-form__input" placeholder="ВВЕДИТЕ НОМЕР ТЕЛЕФОНА">
+			<input type="text" name="call-phone" required class="modal-form__input" placeholder="ВВЕДИТЕ НОМЕР ТЕЛЕФОНА">
 		</label>
 		<button class="modal-form__btn">
 			Отправить данные
@@ -154,13 +154,14 @@
 			<h2 class="header-text__subtitle wow fadeInLeft" data-wow-delay="0.4s">
 				— Ответьте всего на пять вопросов и <strong>получите точный расчет <br>стоимости,</strong>
 				 а так же гарантированную скидку 3000
+				 <img src="img/rubles.svg" alt="" class="pc-true header-text__svg">
 				 <svg class="mob-true" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 				 <path d="M7.5 0C3.36448 0 0 3.36448 0 7.5C0 11.6355 3.36448 15 7.5 15C11.6355 15 15 11.6355 15 7.5C15 3.36448 11.6355 0 7.5 0ZM7.5 14.1211C3.84911 14.1211 0.878906 11.1509 0.878906 7.5C0.878906 3.84911 3.84911 0.878906 7.5 0.878906C11.1509 0.878906 14.1211 3.84911 14.1211 7.5C14.1211 11.1509 11.1509 14.1211 7.5 14.1211Z" fill="#20201F"/>
 				 <path d="M8.44142 3.76559H6.08788C5.84519 3.76559 5.64843 3.96235 5.64843 4.20505V7.53121H5.14648C4.90379 7.53121 4.70703 7.72797 4.70703 7.97066C4.70703 8.21336 4.90379 8.41012 5.14648 8.41012H5.64843V9.41403H5.14648C4.90379 9.41403 4.70703 9.61079 4.70703 9.85349C4.70703 10.0962 4.90379 10.2929 5.14648 10.2929H5.64843V11.2656C5.64843 11.5083 5.84519 11.705 6.08788 11.705C6.33058 11.705 6.52733 11.5083 6.52733 11.2656V10.2929H8.44142C8.68411 10.2929 8.88087 10.0962 8.88087 9.85349C8.88087 9.61079 8.68411 9.41403 8.44142 9.41403H6.52733V8.41012H8.44142C9.72192 8.41012 10.7637 7.36835 10.7637 6.08784C10.7637 4.77569 9.69482 3.76559 8.44142 3.76559ZM8.44142 7.53121H6.52733V4.6445H8.44142C9.23249 4.6445 9.88479 5.28259 9.88479 6.08787C9.88476 6.88375 9.2373 7.53121 8.44142 7.53121Z" fill="#20201F"/>
 				 </svg>
 
 			</h2>
-			<a href="#qwiz-wrapper" class="btn-animate header-text__btn wow fadeInLeft" data-wow-delay="0.6s">
+			<a href="#qwiz-wrapper" class="scroll-btn btn-animate header-text__btn wow fadeInLeft" data-wow-delay="0.6s">
 				<span>рассчитать стоимость</span>
 			</a>
 		</div>
@@ -335,13 +336,13 @@
 						</h2>
 						<div class="qwiz-row">
 							<div class="qwiz-slide-range">
-								<input name="range-1" type="range" class="qwiz-slide-range__input rng-1" min="30" max="150">
+								<input name="range-1" type="range" data-rangeslider class="qwiz-slide-range__input rng-1" min="30" max="150">
 								<div class="qwiz-range-text">
 									<span class="qwiz-range-text__small">
 										30
 									</span>
 									<span class="qwiz-range-text__center">
-										<span class="qwiz-range_result">30</span>см
+										<input class="qwiz-range_result rst-1" value="90">см
 									</span>
 									<span class="qwiz-range-text__small">
 										150
@@ -370,13 +371,13 @@
 						</h2>
 						<div class="qwiz-row">
 							<div class="qwiz-slide-range">
-								<input name="range-1" type="range" class="qwiz-slide-range__input rng-2" min="30" max="150">
+								<input name="range-1" type="range" class="qwiz-slide-range__input rng-2" min="30" max="300">
 								<div class="qwiz-range-text">
 									<span class="qwiz-range-text__small">
 										30
 									</span>
 									<span class="qwiz-range-text__center">
-										<span class="qwiz-range_result rst-2">30</span>см
+										<input class="qwiz-range_result rst-2" value="90">см
 									</span>
 									<span class="qwiz-range-text__small">
 										300
@@ -530,7 +531,7 @@
 							<span class="qwiz-forms__title">
 								Как к Вам обращаться?
 							</span>
-							<form action="" class="qwiz-form">
+							<form action="" id="qwiz-form" class="qwiz-form">
 								<label for="" class="modal-form__label">
 									<span class="modal-form__icon">
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -540,7 +541,7 @@
 										</g>
 										</svg>
 									</span>
-									<input type="text" class="modal-form__input" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ">
+									<input type="text" required name="qwiz-name" class="modal-form__input" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ">
 								</label>
 								<span class="qwiz-forms__title">
 									Введите свой номер телефона
@@ -551,8 +552,14 @@
 										<path d="M19.3038 13.1277C18.0189 13.1277 16.7572 12.9362 15.5616 12.5597C14.9757 12.3693 14.2555 12.544 13.898 12.8939L11.5381 14.5915C8.80131 13.1994 7.1155 11.5934 5.67455 9.00505L7.40359 6.81484C7.85281 6.38734 8.01394 5.76286 7.82089 5.17693C7.42409 4.03161 7.22252 2.8299 7.22252 1.6049C7.22257 0.719948 6.46706 0 5.53846 0H1.68412C0.75551 0 0 0.719948 0 1.60484C0 11.7481 8.65959 20 19.3038 20C20.2325 20 20.988 19.2801 20.988 18.3952V14.7325C20.9879 13.8477 20.2324 13.1277 19.3038 13.1277Z" fill="#E3E3E3" fill-opacity="0.5"/>
 										</svg>
 									</span>
-									<input type="text" class="modal-form__input" placeholder="+7 (777) 777-77-77">
+									<input type="text" required name="qwiz-phone" class="modal-form__input" placeholder="+7 (777) 777-77-77">
 								</label>
+								<input type="text" name="qwiz-color" class="qwiz-display">
+								<input type="text" name="qwiz-sm-1" class="qwiz-display">
+								<input type="text" name="qwiz-sm-2" class="qwiz-display">
+								<input type="text" name="qwiz-delivery" class="qwiz-display">
+								<input type="text" name="qwiz-final" class="qwiz-display">
+								<input type="text" name="qwiz-soc" class="qwiz-display">
 								<button href="#qwiz-wrapper" class="btn-animate header-text__btn wow fadeInLeft" data-wow-delay="0.6s">
 									<span>получить расчет стоимости</span>
 								</button>
