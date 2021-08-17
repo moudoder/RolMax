@@ -6,6 +6,7 @@ $(document).ready(function () {
     top = $(id).offset().top;
     $('body,html').animate({scrollTop: top}, 1500);
   });
+  $(".phone").mask("+7 (999) 999-9999");
   $('.qwiz-slider__inner').slick({
 	  infinite: false,
 	  slidesToShow: 1,
@@ -61,6 +62,7 @@ $(document).ready(function () {
    $('.dark-window').on('click', function() {
    	$('.dark-window').removeClass('dark-window-active');
    	$('.modal-window').removeClass('modal-window-active');
+    $('.modal-thank').removeClass('modal-window-active');
    	return false;
    })
    $('.rst-1').val($('.rng-1').val());
@@ -90,7 +92,7 @@ $(document).ready(function () {
        url: "mail.php",
        data: $(this).serialize()
      }).done(function() {
-       $('.dark-window').removeClass('dark-window-active');
+       $('.modal-thank').addClass('modal-window-active');
        $('.modal-window').removeClass('modal-window-active');
        $(this).find("input").val("");
        $("#form-1").trigger("reset");
@@ -117,18 +119,13 @@ $(document).ready(function () {
      block_5 = $(block_5).children('.qwiz-block__title').text();
      $(input_5).val(block_5)
 
-     console.log($(input_1).val())
-     console.log($(input_2).val())
-     console.log($(input_3).val())
-     console.log($(input_4).val())
-     console.log($(input_5).val())
-     return false;
      $.ajax({
        type: "POST",
        url: "mail-qwiz.php",
        data: $(this).serialize()
      }).done(function() {
-       alert('Отправленно')
+       $('.modal-thank').addClass('modal-window-active');
+       $('.dark-window').addClass('dark-window-active');
        $(this).find("input").val("");
        $("#form-1").trigger("reset");
      });
