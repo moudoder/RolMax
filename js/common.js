@@ -47,7 +47,7 @@ $(document).ready(function () {
    	let childrens = $(parent).children('.qwiz-block');
    	$(childrens).removeClass('qwiz-block-active');
    	$(this).addClass('qwiz-block-active');
-
+    $('.qwiz-slider__inner').slick('slickNext');
    	
    })
    $('.qwiz-nav-block').on('click', function() {
